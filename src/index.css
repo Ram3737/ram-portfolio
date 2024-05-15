@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  --color-grey-50: hsl(265, 55%, 96%);
+  --color-grey-100: hsl(265, 19%, 88%);
+  --color-grey-200: hsl(265, 7%, 70%);
+  --color-grey-300: hsl(265, 6%, 66%);
+  --color-grey-400: hsl(265, 4%, 57%);
+  --color-grey-500: hsl(265, 3%, 53%);
+  --color-grey-600: hsl(263, 4%, 42%);
+  --color-grey-700: hsl(265, 4%, 31%);
+  --color-grey-800: hsl(276, 5%, 20%);
+  --color-grey-900: hsl(280, 5%, 13%);
+
+  --color-main-bg: #0f0f0f;
+  --color-btn: #323232;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-btn-text: #151718;
+  --color-disable: #676767;
+  --color-font-3: #9f9f9f;
+  --color-border: #4747471a;
+  --font-one: "Inter", sans-serif;
+
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;
+  --size-3: 0.75rem;
+  --size-4: 1rem;
+  --size-5: 1.25rem;
+  --size-6: 1.5rem;
+  --size-8: 2rem;
+  --size-16: 4rem;
+  --size-20: 5rem;
+  --size-40: 10rem;
+
+  margin: 0;
+  height: 100%;
+  background-color: var(--color-main-bg) !important;
+  color: #252525;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: #bcbcbc;
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  bottom: -65px;
+}
+
+/* For Webkit based browsers */
+::-webkit-scrollbar {
+  height: 3px;
+  width: 4px; /* width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none; /* transparent track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(265, 4%, 31%); /* color of the handle */
+}

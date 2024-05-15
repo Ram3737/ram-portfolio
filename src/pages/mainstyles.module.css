@@ -1,0 +1,33 @@
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cont_bdr {
+  border-radius: 30px;
+  border: 1px solid var(--color-border);
+  background: linear-gradient(
+    120deg,
+    rgba(76, 76, 76, 0.3),
+    rgba(79, 79, 79, 0.05)
+  );
+}
+
+.section_main {
+  width: 100%;
+  height: fit-content;
+  padding-top: 6rem;
+  background-color: var(--color-main-bg);
+}
+
+.section_main_sub {
+  max-width: 1170px;
+  height: fit-content;
+  margin: 0 auto;
+  padding: 0 0.8rem;
+}
