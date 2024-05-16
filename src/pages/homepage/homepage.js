@@ -12,6 +12,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import styles from "./homepage.module.css";
 import mainStyles from "../mainstyles.module.css";
@@ -41,8 +42,15 @@ function Homepage() {
     <section className={mainStyles.section_main}>
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.home_section_top}`}>
-          <div
+          <motion.div
             className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.home_section_top_left}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
           >
             <div className={styles.top_left_img_box}>
               <img src={personalPic} alt="personal-image" />
@@ -59,11 +67,18 @@ function Homepage() {
               className={styles.top_left_btn_img}
               onClick={() => navigateHandler("about")}
             />
-          </div>
+          </motion.div>
 
           <div className={styles.home_section_top_right}>
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styles.top_right_sub_one}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div style={{ width: "95%", overflow: "hidden" }}>
                 <Marquee pauseOnHover={true} speed={40}>
@@ -77,11 +92,18 @@ function Homepage() {
                   </span>
                 </Marquee>
               </div>
-            </div>
+            </motion.div>
 
             <div className={`${mainStyles.row} ${styles.top_right_sub_two}`}>
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.cred}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div
                   className={styles.project_img}
@@ -111,10 +133,17 @@ function Homepage() {
                     onClick={() => navigateHandler("credentials")}
                   />
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.proj}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div className={styles.project_img}>
                   <img src={projectIcon} alt="sign-image" />
@@ -133,15 +162,22 @@ function Homepage() {
                     onClick={() => navigateHandler("projects")}
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         <div className={`${mainStyles.row} ${styles.home_section_center}`}>
           {windowWidth > 978 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.skills}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div className={styles.project_img}>
                 <img src={codeIcon} alt="sign-image" />
@@ -161,12 +197,19 @@ function Homepage() {
                   onClick={() => navigateHandler("skills")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 978 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.specialization}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div className={`${mainStyles.row} ${styles.icons_row}`}>
                 <div className={styles.icon_cont}>
@@ -204,12 +247,19 @@ function Homepage() {
                   onClick={() => navigateHandler("proficiency")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 978 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.profile}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styles.profile_row}`}
@@ -240,14 +290,21 @@ function Homepage() {
                   onClick={() => navigateHandler("contact-us")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth <= 978 && (
             <div className={`${mainStyles.column} ${styles.layout_change}`}>
               <div className={`${mainStyles.row} ${styles.layout_change_sub}`}>
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.skills}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div className={styles.project_img}>
                     <img src={codeIcon} alt="sign-image" />
@@ -267,10 +324,17 @@ function Homepage() {
                       onClick={() => navigateHandler("skills")}
                     />
                   </div>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.profile}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styles.profile_row}`}
@@ -301,11 +365,18 @@ function Homepage() {
                       onClick={() => navigateHandler("contact-us")}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.common_cont} ${styles.specialization}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div className={`${mainStyles.row} ${styles.icons_row}`}>
                   <div className={styles.icon_cont}>
@@ -343,14 +414,21 @@ function Homepage() {
                     onClick={() => navigateHandler("proficiency")}
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
           )}
         </div>
 
         <div className={`${mainStyles.row} ${styles.home_section_bottom}`}>
-          <div
+          <motion.div
             className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.common_cont} ${styles.bottom_left}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
           >
             <div
               className={`${mainStyles.column} ${mainStyles.cont_bdr} ${styles.bottom_left_sub_items}`}
@@ -372,9 +450,18 @@ function Homepage() {
               <h1>06</h1>
               <h4>total projects</h4>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={`${styles.bottom_item_right} ${styles.together}`}>
+          <motion.div
+            className={`${styles.bottom_item_right} ${styles.together}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
+          >
             <div
               className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styles.common_cont} ${styles.bottom_right_sub}`}
             >
@@ -392,7 +479,7 @@ function Homepage() {
             </div>
 
             <img src={icon2} alt="design-icon" className={styles.design_icon} />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

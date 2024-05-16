@@ -9,6 +9,7 @@ import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./proficiencyPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
@@ -39,7 +40,16 @@ function ProficiencyPage() {
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.about_top}`}>
           {windowWidth > 754 && (
-            <div className={`${mainStyles.cont_bdr} ${styles.about_top_left}`}>
+            <motion.div
+              className={`${mainStyles.cont_bdr} ${styles.about_top_left}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <ul className={mainStyles.column}>
                 <li className={mainStyles.row}>
                   <TbLayout size={40} color="#fff" />
@@ -60,10 +70,20 @@ function ProficiencyPage() {
                   <span>CHARTING</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           )}
           <div className={`${styles.about_top_right}`}>
-            <h1>Proficiencies</h1>
+            <motion.h1
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              Proficiencies
+            </motion.h1>
 
             {windowWidth <= 754 && (
               <div
@@ -95,8 +115,15 @@ function ProficiencyPage() {
             <div
               className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.about_top_right_bottom}`}
             >
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h3>UI/UX</h3>
                 <p>
@@ -105,10 +132,17 @@ function ProficiencyPage() {
                   brand loyalty through intuitive design and delightful
                   interactions.
                 </p>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h3>WEB APP</h3>
                 <p>
@@ -117,10 +151,17 @@ function ProficiencyPage() {
                   experiences that inspire user loyalty and drive business
                   growth.
                 </p>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h3>MOBILE APP</h3>
                 <p>
@@ -129,10 +170,17 @@ function ProficiencyPage() {
                   powerful functionality, delivering intuitive experiences that
                   captivate and delight users.
                 </p>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h3>CHARTING</h3>
                 <p>
@@ -141,15 +189,22 @@ function ProficiencyPage() {
                   empowering informed investment decisions and maximizing
                   portfolio performance.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         <div className={`${mainStyles.row}  ${styles.about_bottom}`}>
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -180,12 +235,19 @@ function ProficiencyPage() {
                   onClick={() => navigateHandler("contact-us")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -209,12 +271,19 @@ function ProficiencyPage() {
                 alt="design-icon"
                 className={styleOne.design_icon}
               />
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={styleOne.project_img}
@@ -244,7 +313,7 @@ function ProficiencyPage() {
                   onClick={() => navigateHandler("credentials")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth <= 975 && (
@@ -252,8 +321,15 @@ function ProficiencyPage() {
               <div
                 className={`${mainStyles.row} ${styleOne.layout_change_sub}`}
               >
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -284,10 +360,17 @@ function ProficiencyPage() {
                       onClick={() => navigateHandler("contact-us")}
                     />
                   </div>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={styleOne.project_img}
@@ -317,11 +400,18 @@ function ProficiencyPage() {
                       onClick={() => navigateHandler("credentials")}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div
+              <motion.div
                 className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div
                   className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -345,7 +435,7 @@ function ProficiencyPage() {
                   alt="design-icon"
                   className={styleOne.design_icon}
                 />
-              </div>
+              </motion.div>
             </div>
           )}
         </div>

@@ -6,6 +6,7 @@ import btnImg from "../../assets/icons/btn-icon.svg";
 import personalImg from "../../assets/images/personal-pic.svg";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./aboutPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
@@ -35,17 +36,43 @@ function AboutPage() {
     <section className={mainStyles.section_main}>
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.about_top}`}>
-          <div className={`${mainStyles.cont_bdr} ${styles.about_top_left}`}>
+          <motion.div
+            className={`${mainStyles.cont_bdr} ${styles.about_top_left}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
+          >
             <div className={styles.about_top_left_img_box}>
               <img src={personalImg} alt="personal-image" />
             </div>
-          </div>
+          </motion.div>
 
           <div className={`${styles.about_top_right}`}>
-            <h1>SELF-SUMMARY</h1>
+            <motion.h1
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              SELF-SUMMARY
+            </motion.h1>
 
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <img
                 src={icon2}
@@ -62,12 +89,21 @@ function AboutPage() {
                 client expectations. Ready to leverage my skills and experience
                 to drive innovation and success in your team.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         <div className={`${mainStyles.row} ${styles.about_center}`}>
-          <div className={`${mainStyles.cont_bdr} ${styles.about_center_left}`}>
+          <motion.div
+            className={`${mainStyles.cont_bdr} ${styles.about_center_left}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
+          >
             <h3>experience</h3>
             <ul>
               <li>
@@ -82,9 +118,18 @@ function AboutPage() {
                 <p className={styles.company}>Synerixs</p>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className={`${mainStyles.cont_bdr} ${styles.about_center_left}`}>
+          <motion.div
+            className={`${mainStyles.cont_bdr} ${styles.about_center_left}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
+          >
             <h3>education</h3>
             <ul>
               <li>
@@ -99,13 +144,20 @@ function AboutPage() {
                 <p className={styles.company}>Udemy</p>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         <div className={`${mainStyles.row}  ${styles.about_bottom}`}>
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -136,12 +188,19 @@ function AboutPage() {
                   onClick={() => navigateHandler("contact-us")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -165,12 +224,19 @@ function AboutPage() {
                 alt="design-icon"
                 className={styleOne.design_icon}
               />
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={styleOne.project_img}
@@ -200,7 +266,7 @@ function AboutPage() {
                   onClick={() => navigateHandler("credentials")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth <= 975 && (
@@ -208,8 +274,15 @@ function AboutPage() {
               <div
                 className={`${mainStyles.row} ${styleOne.layout_change_sub}`}
               >
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -240,10 +313,17 @@ function AboutPage() {
                       onClick={() => navigateHandler("contact-us")}
                     />
                   </div>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={styleOne.project_img}
@@ -273,11 +353,18 @@ function AboutPage() {
                       onClick={() => navigateHandler("credentials")}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div
+              <motion.div
                 className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div
                   className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -301,7 +388,7 @@ function AboutPage() {
                   alt="design-icon"
                   className={styleOne.design_icon}
                 />
-              </div>
+              </motion.div>
             </div>
           )}
         </div>

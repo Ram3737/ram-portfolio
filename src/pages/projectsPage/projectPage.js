@@ -5,6 +5,7 @@ import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./projectPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
@@ -35,13 +36,30 @@ function ProjectPage() {
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.about_top}`}>
           <div className={`${styles.about_top_right}`}>
-            <h1>Projects</h1>
+            <motion.h1
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              Projects
+            </motion.h1>
 
             <div
               className={`${mainStyles.row} ${styles.about_top_right_bottom}`}
             >
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>Nadakacheri</h2>
                 <h5>Frontend</h5>
@@ -83,10 +101,17 @@ function ProjectPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>servy - crm</h2>
                 <h5>Frontend Web & Mobile App</h5>
@@ -128,10 +153,17 @@ function ProjectPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>Quordinate</h2>
                 <h5>Frontend</h5>
@@ -172,10 +204,17 @@ function ProjectPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>Energeek</h2>
                 <h5>Fullstack</h5>
@@ -217,10 +256,17 @@ function ProjectPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>meinhardt</h2>
                 <h5>Fullstack</h5>
@@ -262,10 +308,17 @@ function ProjectPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>charteey</h2>
                 <h5>Fullstack Web & Mobile App</h5>
@@ -309,15 +362,22 @@ function ProjectPage() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         <div className={`${mainStyles.row}  ${styles.about_bottom}`}>
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -348,12 +408,19 @@ function ProjectPage() {
                   onClick={() => navigateHandler("contact-us")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -377,12 +444,19 @@ function ProjectPage() {
                 alt="design-icon"
                 className={styleOne.design_icon}
               />
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={styleOne.project_img}
@@ -412,7 +486,7 @@ function ProjectPage() {
                   onClick={() => navigateHandler("credentials")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth <= 975 && (
@@ -420,8 +494,15 @@ function ProjectPage() {
               <div
                 className={`${mainStyles.row} ${styleOne.layout_change_sub}`}
               >
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -452,10 +533,17 @@ function ProjectPage() {
                       onClick={() => navigateHandler("contact-us")}
                     />
                   </div>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={styleOne.project_img}
@@ -485,11 +573,18 @@ function ProjectPage() {
                       onClick={() => navigateHandler("credentials")}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div
+              <motion.div
                 className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div
                   className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -513,7 +608,7 @@ function ProjectPage() {
                   alt="design-icon"
                   className={styleOne.design_icon}
                 />
-              </div>
+              </motion.div>
             </div>
           )}
         </div>

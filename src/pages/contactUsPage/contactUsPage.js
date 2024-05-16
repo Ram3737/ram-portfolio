@@ -6,6 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { toast } from "react-toastify";
 import ButtonComponent from "../../components/buttonComponent/buttonComponent";
+import { motion } from "framer-motion";
 import styles from "./contactUsPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import { CallPostApiServices } from "../../webservices/apiCalls";
@@ -92,7 +93,15 @@ function ContactUsPage() {
         <div className={`${mainStyles.row} ${styles.contact_main}`}>
           <div className={`${styles.contact_info_cont}`}>
             <h3>contact info</h3>
-            <ul>
+            <motion.ul
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <li className={`${mainStyles.row}`}>
                 <div
                   className={`${mainStyles.column} ${mainStyles.cont_bdr} ${styles.info_icon_box}`}
@@ -102,12 +111,22 @@ function ContactUsPage() {
 
                 <div className={styles.info_text_cont}>
                   <span>mail me</span>
-                  <h4>nksriram37@gmail.com</h4>
+                  <a href="mailto:nksriram37@gmail.com" target="_blank">
+                    <h4>nksriram37@gmail.com</h4>
+                  </a>
                 </div>
               </li>
-            </ul>
+            </motion.ul>
 
-            <ul>
+            <motion.ul
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <li className={`${mainStyles.row}`}>
                 <div
                   className={`${mainStyles.column} ${mainStyles.cont_bdr} ${styles.info_icon_box}`}
@@ -117,12 +136,22 @@ function ContactUsPage() {
 
                 <div className={styles.info_text_cont}>
                   <span>contact me</span>
-                  <h4>+91 7010034542</h4>
+                  <a href="tel:+91 7010034542">
+                    <h4>+91 7010034542</h4>
+                  </a>
                 </div>
               </li>
-            </ul>
+            </motion.ul>
 
-            <ul>
+            <motion.ul
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <li
                 className={`${mainStyles.row}`}
                 style={{ alignItems: "center" }}
@@ -139,37 +168,67 @@ function ContactUsPage() {
                   <h4>T.kallupatti, Madurai.</h4>
                 </div>
               </li>
-            </ul>
+            </motion.ul>
 
             <h3>social info</h3>
             <div className={`${mainStyles.row} ${styles.social_cont}`}>
               <a href="https://ram-portfolio-dev.netlify.app/">
-                <div
+                <motion.div
                   className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <TbWorld color="#fff" size={30} />
-                </div>
+                </motion.div>
               </a>
 
               <a href="https://www.linkedin.com/in/sriram-kesavan-dev?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                <div
+                <motion.div
                   className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <IoLogoLinkedin color="#fff" size={30} />
-                </div>
+                </motion.div>
               </a>
 
               <a href="https://github.com/Ram3737">
-                <div
+                <motion.div
                   className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <FaGithub color="#fff" size={30} />
-                </div>
+                </motion.div>
               </a>
             </div>
           </div>
 
-          <div className={`${mainStyles.cont_bdr} ${styles.form_cont}`}>
+          <motion.div
+            className={`${mainStyles.cont_bdr} ${styles.form_cont}`}
+            animate={{
+              opacity: 1,
+              scale: [0, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
+          >
             <h1>
               Let's work <span>together.</span>
             </h1>
@@ -219,7 +278,7 @@ function ContactUsPage() {
                 style={styles.submit_button}
               />
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

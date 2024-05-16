@@ -5,6 +5,7 @@ import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./skillsPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
@@ -35,13 +36,30 @@ function SkillsPage() {
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.about_top}`}>
           <div className={`${styles.about_top_right}`}>
-            <h1>Skills</h1>
+            <motion.h1
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
+              Skills
+            </motion.h1>
 
             <div
               className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.about_top_right_bottom}`}
             >
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>frontend</h2>
 
@@ -76,10 +94,17 @@ function SkillsPage() {
                     <h3>React Native</h3>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>backend</h2>
 
@@ -99,10 +124,17 @@ function SkillsPage() {
                     <h3>Mango DB</h3>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div
+              <motion.div
                 className={`${mainStyles.cont_bdr} ${styles.about_top_right_bottom_text_cont}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <h2>charting</h2>
 
@@ -117,15 +149,22 @@ function SkillsPage() {
                     <h3>Fundamental Analysis</h3>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
 
         <div className={`${mainStyles.row}  ${styles.about_bottom}`}>
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -156,12 +195,19 @@ function SkillsPage() {
                   onClick={() => navigateHandler("contact-us")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -185,12 +231,19 @@ function SkillsPage() {
                 alt="design-icon"
                 className={styleOne.design_icon}
               />
-            </div>
+            </motion.div>
           )}
 
           {windowWidth > 975 && (
-            <div
+            <motion.div
               className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
             >
               <div
                 className={styleOne.project_img}
@@ -220,7 +273,7 @@ function SkillsPage() {
                   onClick={() => navigateHandler("credentials")}
                 />
               </div>
-            </div>
+            </motion.div>
           )}
 
           {windowWidth <= 975 && (
@@ -228,8 +281,15 @@ function SkillsPage() {
               <div
                 className={`${mainStyles.row} ${styleOne.layout_change_sub}`}
               >
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.profile}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={` ${mainStyles.row} ${mainStyles.cont_bdr} ${styleOne.profile_row}`}
@@ -260,10 +320,17 @@ function SkillsPage() {
                       onClick={() => navigateHandler("contact-us")}
                     />
                   </div>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
                   className={`${mainStyles.cont_bdr} ${styleOne.common_cont} ${styleOne.cred}`}
+                  animate={{
+                    opacity: 1,
+                    scale: [0, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                  }}
                 >
                   <div
                     className={styleOne.project_img}
@@ -293,11 +360,18 @@ function SkillsPage() {
                       onClick={() => navigateHandler("credentials")}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div
+              <motion.div
                 className={`${styleOne.bottom_item_right} ${styleOne.together}`}
+                animate={{
+                  opacity: 1,
+                  scale: [0, 1],
+                }}
+                transition={{
+                  duration: 1,
+                }}
               >
                 <div
                   className={`${mainStyles.cont_bdr} ${mainStyles.row} ${styleOne.common_cont} ${styleOne.bottom_right_sub}`}
@@ -321,7 +395,7 @@ function SkillsPage() {
                   alt="design-icon"
                   className={styleOne.design_icon}
                 />
-              </div>
+              </motion.div>
             </div>
           )}
         </div>

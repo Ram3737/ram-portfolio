@@ -4,6 +4,7 @@ import { RiInstagramLine } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import styles from "./credentialsPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
@@ -20,8 +21,15 @@ function CredentialsPage() {
     <section className={mainStyles.section_main}>
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.credentials_cont}`}>
-          <div
+          <motion.div
             className={`${mainStyles.cont_bdr} ${mainStyles.column} ${styles.credentials_left}`}
+            animate={{
+              opacity: [0, 1],
+              y: [600, 1],
+            }}
+            transition={{
+              duration: 1,
+            }}
           >
             <div className={styles.credentials_top_left_img_box}>
               <img src={personalImg} alt="personal-image" />
@@ -62,10 +70,19 @@ function CredentialsPage() {
               style={styles.contact_btn}
               handler={navigateHandler}
             />
-          </div>
+          </motion.div>
 
           <div className={`${styles.credentials_right}`}>
-            <div className={styles.about_me}>
+            <motion.div
+              className={styles.about_me}
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <h2>about me</h2>
               <p>
                 I'm a seasoned full-stack developer adept in HTML, CSS,
@@ -82,9 +99,18 @@ function CredentialsPage() {
                 deliver cutting-edge solutions. Ready to leverage my skills and
                 enthusiasm to drive impactful outcomes for your team.
               </p>
-            </div>
+            </motion.div>
 
-            <div className={styles.exp_and_edu}>
+            <motion.div
+              className={styles.exp_and_edu}
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <h2>Experience</h2>
               <div>
                 <h4>Sept 2022 - Nov 2023</h4>
@@ -114,9 +140,18 @@ function CredentialsPage() {
                   expectations in the ever-evolving tech landscape.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.exp_and_edu}>
+            <motion.div
+              className={styles.exp_and_edu}
+              animate={{
+                opacity: [0, 1],
+                y: [600, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <h2>Education</h2>
               <div>
                 <h4>2014 - 2018</h4>
@@ -146,9 +181,18 @@ function CredentialsPage() {
                   impactful solutions with unwavering excellence.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.skills}>
+            <motion.div
+              className={styles.skills}
+              animate={{
+                opacity: 1,
+                scale: [0, 1],
+              }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <h2>Skills</h2>
               <div className={`${mainStyles.row} ${styles.skills_sub}`}>
                 <div
@@ -207,7 +251,7 @@ function CredentialsPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
