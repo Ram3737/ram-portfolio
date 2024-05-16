@@ -4,11 +4,13 @@ import icon2 from "../../assets/icons/icon2.png";
 import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./skillsPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
 
 function SkillsPage() {
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(undefined);
 
   useEffect(() => {
@@ -23,6 +25,10 @@ function SkillsPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  function navigateHandler(link) {
+    navigate(`/${link}`);
+  }
 
   return (
     <section className={mainStyles.section_main}>
@@ -144,7 +150,11 @@ function SkillsPage() {
                   <h1>Profiles</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
             </div>
           )}
@@ -163,7 +173,11 @@ function SkillsPage() {
                   work <span>together.</span>
                 </h1>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
 
               <img
@@ -200,7 +214,11 @@ function SkillsPage() {
                   <h1>Credentials</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("credentials")}
+                />
               </div>
             </div>
           )}
@@ -236,7 +254,11 @@ function SkillsPage() {
                       <h1>Profiles</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("contact-us")}
+                    />
                   </div>
                 </div>
 
@@ -265,7 +287,11 @@ function SkillsPage() {
                       <h1>Credentials</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("credentials")}
+                    />
                   </div>
                 </div>
               </div>
@@ -283,7 +309,11 @@ function SkillsPage() {
                     work <span>together.</span>
                   </h1>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("contact-us")}
+                  />
                 </div>
 
                 <img

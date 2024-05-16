@@ -1,10 +1,12 @@
 import { Fragment, useState, useEffect } from "react";
-// import Logo from "../../assets/images/logo.svg";
+import { toast } from "react-toastify";
 import { IoMenu } from "react-icons/io5";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 import { useLocation, useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { config } from "../../webservices/config";
 import styles from "./main-navigation.module.css";
 import ButtonComponent from "../buttonComponent/buttonComponent";
 
@@ -14,6 +16,7 @@ function MainNavigation(props) {
 
   const [windowWidth, setWindowWidth] = useState(undefined);
   const [isMenuBtnClicked, setIsMenuBtnClicked] = useState(false);
+  const [btnLoader, setBtnLoader] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,6 +40,43 @@ function MainNavigation(props) {
   function menuBtnHandler() {
     setIsMenuBtnClicked(!isMenuBtnClicked);
   }
+
+  function talkBtnHandler() {
+    setIsMenuBtnClicked(!isMenuBtnClicked);
+    navigate("contact-us");
+  }
+
+  const downloadResumeHandler = async () => {
+    setBtnLoader(true);
+    const url = `${config.apiurl}/pdf/resume`;
+
+    try {
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        toast.error("Error downloading resume.");
+        setBtnLoader(false);
+        return;
+      }
+
+      const blob = await response.blob();
+
+      // Create a hidden anchor element
+      const anchor = document.createElement("a");
+      anchor.href = window.URL.createObjectURL(blob);
+      anchor.download = "Sriram.pdf";
+
+      // Programmatically trigger a click event
+      anchor.click();
+
+      setBtnLoader(false);
+    } catch (error) {
+      toast.error("Error downloading resume.");
+      setBtnLoader(false);
+    }
+    setBtnLoader(false);
+  };
+
   return (
     <div className={styles.header_outer}>
       <nav className={styles.nav}>
@@ -86,13 +126,13 @@ function MainNavigation(props) {
                     scale: 1.05,
                   }}
                   onClick={(e) => {
-                    menuClicked(e, "works");
+                    menuClicked(e, "projects");
                   }}
                 >
                   <a
                     style={{
                       color:
-                        location.pathname === "/works" ? "#fff" : "#676767",
+                        location.pathname === "/projects" ? "#fff" : "#676767",
                     }}
                   >
                     Works
@@ -104,13 +144,15 @@ function MainNavigation(props) {
                     scale: 1.05,
                   }}
                   onClick={(e) => {
-                    menuClicked(e, "contact");
+                    menuClicked(e, "contact-us");
                   }}
                 >
                   <a
                     style={{
                       color:
-                        location.pathname === "/contact" ? "#fff" : "#676767",
+                        location.pathname === "/contact-us"
+                          ? "#fff"
+                          : "#676767",
                     }}
                   >
                     Contact
@@ -122,9 +164,18 @@ function MainNavigation(props) {
           {windowWidth > 875 && (
             <div className={styles.nav_right} key="login">
               <ButtonComponent
-                text={"Let's Talk"}
+                text={"Resume"}
                 style={styles.button}
-                // handler={signupBtnHandler}
+                handler={downloadResumeHandler}
+                children={
+                  <MdOutlineFileDownload
+                    color="#fff"
+                    size={18}
+                    style={{ marginRight: "5px" }}
+                  />
+                }
+                indicator={btnLoader}
+                disabled={btnLoader}
               />
             </div>
           )}
@@ -175,13 +226,13 @@ function MainNavigation(props) {
                       <div
                         className={styles.menu_option}
                         onClick={(e) => {
-                          menuClicked(e, "works");
+                          menuClicked(e, "projects");
                         }}
                       >
                         <span
                           style={{
                             color:
-                              location.pathname === "/works"
+                              location.pathname === "/projects"
                                 ? "#fff"
                                 : "#676767",
                           }}
@@ -193,13 +244,13 @@ function MainNavigation(props) {
                       <div
                         className={styles.menu_option}
                         onClick={(e) => {
-                          menuClicked(e, "contact");
+                          menuClicked(e, "contact-us");
                         }}
                       >
                         <span
                           style={{
                             color:
-                              location.pathname === "/contact"
+                              location.pathname === "/contact-us"
                                 ? "#fff"
                                 : "#676767",
                           }}
@@ -212,7 +263,7 @@ function MainNavigation(props) {
                     <div className={styles.menu_option_btn_container}>
                       <ButtonComponent
                         text={"Let's Talk"}
-                        // handler={signupBtnHandler}
+                        handler={talkBtnHandler}
                       />
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Dots } from "react-activity";
+import { MdOutlineFileDownload } from "react-icons/md";
 import "react-activity/dist/library.css";
 import styles from "./buttonComponent.module.css";
 
@@ -23,7 +24,7 @@ function ButtonComponent({
       onClick={handler}
       disabled={disabled}
     >
-      {children && children}
+      {!indicator && children && children}
       {indicator && <Dots size={13} color="#fff" />}
       {!indicator && text}
     </motion.button>

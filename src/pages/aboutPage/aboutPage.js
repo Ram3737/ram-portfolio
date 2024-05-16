@@ -5,11 +5,13 @@ import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import personalImg from "../../assets/images/personal-pic.svg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./aboutPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
 
 function AboutPage() {
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(undefined);
 
   useEffect(() => {
@@ -24,6 +26,10 @@ function AboutPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  function navigateHandler(link) {
+    navigate(`/${link}`);
+  }
 
   return (
     <section className={mainStyles.section_main}>
@@ -49,10 +55,12 @@ function AboutPage() {
 
               <h1>SRIRAM</h1>
               <p>
-                I am a San francisco-based product designer with a focus on web
-                design, illustration, a visual development. I have a diverse
-                range of experience having worked across various fields and
-                industries.
+                I'm a seasoned full-stack developer with 3 years of expertise in
+                HTML, CSS, JavaScript, React, Next.js, Node.js, and Express.js.
+                Proficient in crafting dynamic web and mobile applications, I
+                excel in delivering high-quality, scalable solutions that exceed
+                client expectations. Ready to leverage my skills and experience
+                to drive innovation and success in your team.
               </p>
             </div>
           </div>
@@ -122,7 +130,11 @@ function AboutPage() {
                   <h1>Profiles</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
             </div>
           )}
@@ -141,7 +153,11 @@ function AboutPage() {
                   work <span>together.</span>
                 </h1>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
 
               <img
@@ -178,7 +194,11 @@ function AboutPage() {
                   <h1>Credentials</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("credentials")}
+                />
               </div>
             </div>
           )}
@@ -214,7 +234,11 @@ function AboutPage() {
                       <h1>Profiles</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("contact-us")}
+                    />
                   </div>
                 </div>
 
@@ -243,7 +267,11 @@ function AboutPage() {
                       <h1>Credentials</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("credentials")}
+                    />
                   </div>
                 </div>
               </div>
@@ -261,7 +289,11 @@ function AboutPage() {
                     work <span>together.</span>
                   </h1>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("contact-us")}
+                  />
                 </div>
 
                 <img

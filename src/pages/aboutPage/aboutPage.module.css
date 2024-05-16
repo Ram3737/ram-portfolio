@@ -131,6 +131,8 @@
 @media screen and (max-width: 906px) {
   .about_top_right h1 {
     font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 }
 

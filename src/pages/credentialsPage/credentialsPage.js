@@ -1,11 +1,21 @@
 import personalImg from "../../assets/images/personal-pic.svg";
-import { useState, useEffect } from "react";
+import { TbWorld } from "react-icons/tb";
+import { RiInstagramLine } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
+import { IoLogoLinkedin } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import styles from "./credentialsPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
 import ButtonComponent from "../../components/buttonComponent/buttonComponent";
 
 function CredentialsPage() {
+  const navigate = useNavigate();
+
+  function navigateHandler() {
+    navigate("/contact-us");
+  }
+
   return (
     <section className={mainStyles.section_main}>
       <div className={mainStyles.section_main_sub}>
@@ -22,30 +32,55 @@ function CredentialsPage() {
             <p>@sriram</p>
 
             <ul className={`${mainStyles.row} ${styles.media_cont}`}>
-              <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}></li>
-              <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}></li>
-              <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}></li>
-              <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}></li>
+              <a href="https://ram-portfolio-dev.netlify.app/">
+                <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}>
+                  <TbWorld color="#fff" size={20} />
+                </li>
+              </a>
+
+              <a href="https://www.linkedin.com/in/sriram-kesavan-dev?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}>
+                  <IoLogoLinkedin color="#fff" size={20} />
+                </li>
+              </a>
+
+              <a href="https://github.com/Ram3737">
+                <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}>
+                  <FaGithub color="#fff" size={20} />
+                </li>
+              </a>
+
+              <a href="https://www.instagram.com/nk_sriram?igsh=MTdqYzE3dDdjNDNvdA==">
+                <li className={`${mainStyles.row} ${mainStyles.cont_bdr}`}>
+                  <RiInstagramLine color="#fff" size={20} />
+                </li>
+              </a>
             </ul>
 
-            <ButtonComponent text={"Contact Me"} style={styles.contact_btn} />
+            <ButtonComponent
+              text={"Contact Me"}
+              style={styles.contact_btn}
+              handler={navigateHandler}
+            />
           </div>
 
           <div className={`${styles.credentials_right}`}>
             <div className={styles.about_me}>
               <h2>about me</h2>
               <p>
-                Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                urna, porttitor rhoncus dolor purus non enim praesent in
-                elementum sahas facilisis leo, vel fringilla est ullamcorper
-                eget nulla facilisi etisam dignissim diam quis enim lobortis
-                viverra orci sagittis eu volutpat odio facilisis mauris sit.
+                I'm a seasoned full-stack developer adept in HTML, CSS,
+                JavaScript, React.js, Next.js, Node.js, and Express.js with 3
+                years expertise. Passionate about creating seamless web and
+                mobile applications, I excel in both frontend and backend
+                development. With a keen eye for detail and a commitment to
+                innovation, I ensure high-quality results on every project.
               </p>
               <p>
-                Scelerisque fermentum duisi faucibus in ornare quam sisd sit
-                amet luctussd fav venenatis, lectus magna fringilla zac urna,
-                porttitor rhoncus dolor purus non enim praesent cuz elementum
-                sahas facilisis leot.
+                My collaborative nature enables effective teamwork, fostering a
+                dynamic environment for success. Constantly evolving with
+                emerging technologies, I stay ahead of industry trends to
+                deliver cutting-edge solutions. Ready to leverage my skills and
+                enthusiasm to drive impactful outcomes for your team.
               </p>
             </div>
 
@@ -56,11 +91,12 @@ function CredentialsPage() {
                 <h3>Frontend Developer</h3>
                 <h5>Starlly Solutions</h5>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor rhoncus dolor purus non enim praesent in
-                  elementum sahas facilisis leo, vel fringilla est ullamcorper
-                  eget nulla facilisi etisam dignissim diam quis enim lobortis
-                  viverra orci sagittis eu volutpat odio facilisis mauris sit.
+                  Entrenched within Starlly Solutions, I excelled as a dynamic
+                  developer, proficient in both frontend and fullstack
+                  development for mobile and web applications. With a proven
+                  record of contributing to over 5 projects, I bring a potent
+                  mix of innovation, dedication, and expertise to every
+                  endeavor.
                 </p>
               </div>
 
@@ -69,11 +105,13 @@ function CredentialsPage() {
                 <h3>Fullstack Developer</h3>
                 <h5>Synerixs</h5>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor rhoncus dolor purus non enim praesent in
-                  elementum sahas facilisis leo, vel fringilla est ullamcorper
-                  eget nulla facilisi etisam dignissim diam quis enim lobortis
-                  viverra orci sagittis eu volutpat odio facilisis mauris sit.
+                  At Synerixs, I honed my craft as a Fullstack Developer,
+                  adeptly navigating the intricacies of both mobile and web
+                  application development. My contributions to the company's
+                  flagship product underscore my commitment to excellence and
+                  innovation. With a proven ability to tackle challenges
+                  head-on, I am poised to elevate any team and exceed
+                  expectations in the ever-evolving tech landscape.
                 </p>
               </div>
             </div>
@@ -85,11 +123,13 @@ function CredentialsPage() {
                 <h3>Bachelor Degree in IT</h3>
                 <h5>Kamaraj college of Engg & Tech</h5>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor rhoncus dolor purus non enim praesent in
-                  elementum sahas facilisis leo, vel fringilla est ullamcorper
-                  eget nulla facilisi etisam dignissim diam quis enim lobortis
-                  viverra orci sagittis eu volutpat odio facilisis mauris sit.
+                  Earned a Bachelor's Degree in Information Technology from
+                  Kamaraj College of Engineering & Technology (2014-2018).
+                  Focused curriculum and hands-on learning fostered adept
+                  problem-solving skills, a keen understanding of IT
+                  fundamentals, and a commitment to excellence. Equipped with
+                  comprehensive knowledge to thrive in dynamic tech
+                  environments.
                 </p>
               </div>
 
@@ -98,11 +138,12 @@ function CredentialsPage() {
                 <h3>All Tech Courses</h3>
                 <h5>Udemy</h5>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor rhoncus dolor purus non enim praesent in
-                  elementum sahas facilisis leo, vel fringilla est ullamcorper
-                  eget nulla facilisi etisam dignissim diam quis enim lobortis
-                  viverra orci sagittis eu volutpat odio facilisis mauris sit.
+                  Acquired expertise in HTML, CSS, JavaScript, React.js,
+                  Next.js, Node.js, and Express.js through Udemy's rigorous tech
+                  courses. My dedication ensures exceeding expectations,
+                  promising exceptional results. Eager to leverage my skills to
+                  drive innovation and surpass goals in any role, delivering
+                  impactful solutions with unwavering excellence.
                 </p>
               </div>
             </div>
@@ -116,25 +157,25 @@ function CredentialsPage() {
                   <div>
                     <span>90%</span>
                     <h3>HTML</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
 
                   <div>
                     <span>90%</span>
                     <h3>CSS</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
 
                   <div>
                     <span>90%</span>
                     <h3>JavaScript</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
 
                   <div>
                     <span>90%</span>
                     <h3>React JS</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
                 </div>
 
@@ -144,25 +185,25 @@ function CredentialsPage() {
                   <div>
                     <span>70%</span>
                     <h3>Next Js</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
 
                   <div>
                     <span>75%</span>
                     <h3>Node JS</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
 
                   <div>
                     <span>75%</span>
                     <h3>Express JS</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
 
                   <div>
                     <span>80%</span>
                     <h3>React Native</h3>
-                    <p>Non enim praesent</p>
+                    <p>Skills accomplished</p>
                   </div>
                 </div>
               </div>

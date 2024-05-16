@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
-import { RiInstagramLine } from "react-icons/ri";
+// import { RiInstagramLine } from "react-icons/ri";
+import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { toast } from "react-toastify";
 import ButtonComponent from "../../components/buttonComponent/buttonComponent";
@@ -142,23 +143,29 @@ function ContactUsPage() {
 
             <h3>social info</h3>
             <div className={`${mainStyles.row} ${styles.social_cont}`}>
-              <div
-                className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
-              >
-                <TbWorld color="#fff" size={30} />
-              </div>
+              <a href="https://ram-portfolio-dev.netlify.app/">
+                <div
+                  className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
+                >
+                  <TbWorld color="#fff" size={30} />
+                </div>
+              </a>
 
-              <div
-                className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
-              >
-                <RiInstagramLine color="#fff" size={30} />
-              </div>
+              <a href="https://www.linkedin.com/in/sriram-kesavan-dev?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <div
+                  className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
+                >
+                  <IoLogoLinkedin color="#fff" size={30} />
+                </div>
+              </a>
 
-              <div
-                className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
-              >
-                <FaGithub color="#fff" size={30} />
-              </div>
+              <a href="https://github.com/Ram3737">
+                <div
+                  className={`${mainStyles.row} ${mainStyles.cont_bdr} ${styles.circle_social}`}
+                >
+                  <FaGithub color="#fff" size={30} />
+                </div>
+              </a>
             </div>
           </div>
 

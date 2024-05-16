@@ -8,11 +8,13 @@ import icon2 from "../../assets/icons/icon2.png";
 import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./proficiencyPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
 
 function ProficiencyPage() {
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(undefined);
 
   useEffect(() => {
@@ -27,6 +29,10 @@ function ProficiencyPage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  function navigateHandler(link) {
+    navigate(`/${link}`);
+  }
 
   return (
     <section className={mainStyles.section_main}>
@@ -94,10 +100,10 @@ function ProficiencyPage() {
               >
                 <h3>UI/UX</h3>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor asna rhoncus dolor purus non enim aberitin
-                  praesent in elementum sahas facilisis leo, vel fringilla est
-                  etisam dignissim.
+                  Seamlessly merging creativity and user empathy, I craft
+                  interfaces that captivate users, fostering engagement and
+                  brand loyalty through intuitive design and delightful
+                  interactions.
                 </p>
               </div>
 
@@ -106,10 +112,10 @@ function ProficiencyPage() {
               >
                 <h3>WEB APP</h3>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor asna rhoncus dolor purus non enim aberitin
-                  praesent in elementum sahas facilisis leo, vel fringilla est
-                  etisam dignissim.
+                  From concept to launch, I engineer web applications that marry
+                  sleek design with robust functionality, delivering seamless
+                  experiences that inspire user loyalty and drive business
+                  growth.
                 </p>
               </div>
 
@@ -118,10 +124,10 @@ function ProficiencyPage() {
               >
                 <h3>MOBILE APP</h3>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor asna rhoncus dolor purus non enim aberitin
-                  praesent in elementum sahas facilisis leo, vel fringilla est
-                  etisam dignissim.
+                  With a keen eye for detail and a passion for innovation, I
+                  engineer mobile solutions that blend sleek design with
+                  powerful functionality, delivering intuitive experiences that
+                  captivate and delight users.
                 </p>
               </div>
 
@@ -130,10 +136,10 @@ function ProficiencyPage() {
               >
                 <h3>CHARTING</h3>
                 <p>
-                  Sit amet luctussd fav venenatis, lectus magna fringilla inis
-                  urna, porttitor asna rhoncus dolor purus non enim aberitin
-                  praesent in elementum sahas facilisis leo, vel fringilla est
-                  etisam dignissim.
+                  Proficient in deciphering stock price charts, I utilize
+                  advanced charting techniques to uncover trends and patterns,
+                  empowering informed investment decisions and maximizing
+                  portfolio performance.
                 </p>
               </div>
             </div>
@@ -168,7 +174,11 @@ function ProficiencyPage() {
                   <h1>Profiles</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
             </div>
           )}
@@ -187,7 +197,11 @@ function ProficiencyPage() {
                   work <span>together.</span>
                 </h1>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
 
               <img
@@ -224,7 +238,11 @@ function ProficiencyPage() {
                   <h1>Credentials</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("credentials")}
+                />
               </div>
             </div>
           )}
@@ -260,7 +278,11 @@ function ProficiencyPage() {
                       <h1>Profiles</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("contact-us")}
+                    />
                   </div>
                 </div>
 
@@ -289,7 +311,11 @@ function ProficiencyPage() {
                       <h1>Credentials</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("credentials")}
+                    />
                   </div>
                 </div>
               </div>
@@ -307,7 +333,11 @@ function ProficiencyPage() {
                     work <span>together.</span>
                   </h1>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("contact-us")}
+                  />
                 </div>
 
                 <img

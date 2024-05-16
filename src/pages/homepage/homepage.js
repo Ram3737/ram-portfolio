@@ -11,11 +11,13 @@ import { TbGraph } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import styles from "./homepage.module.css";
 import mainStyles from "../mainstyles.module.css";
 
 function Homepage() {
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(undefined);
 
   useEffect(() => {
@@ -30,6 +32,10 @@ function Homepage() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  function navigateHandler(link) {
+    navigate(`/${link}`);
+  }
 
   return (
     <section className={mainStyles.section_main}>
@@ -51,6 +57,7 @@ function Homepage() {
               src={btnImg}
               alt="button-image"
               className={styles.top_left_btn_img}
+              onClick={() => navigateHandler("about")}
             />
           </div>
 
@@ -98,7 +105,11 @@ function Homepage() {
                     <h1>Credentials</h1>
                   </div>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("credentials")}
+                  />
                 </div>
               </div>
 
@@ -116,7 +127,11 @@ function Homepage() {
                     <h1>Projects</h1>
                   </div>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("projects")}
+                  />
                 </div>
               </div>
             </div>
@@ -140,7 +155,11 @@ function Homepage() {
                   <h1>Skills</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("skills")}
+                />
               </div>
             </div>
           )}
@@ -179,7 +198,11 @@ function Homepage() {
                   <h1>Proficiencies</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("proficiency")}
+                />
               </div>
             </div>
           )}
@@ -211,7 +234,11 @@ function Homepage() {
                   <h1>Profiles</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
             </div>
           )}
@@ -234,7 +261,11 @@ function Homepage() {
                       <h1>Skills</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("skills")}
+                    />
                   </div>
                 </div>
 
@@ -264,7 +295,11 @@ function Homepage() {
                       <h1>Profiles</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("contact-us")}
+                    />
                   </div>
                 </div>
               </div>
@@ -302,7 +337,11 @@ function Homepage() {
                     <h1>Proficiencies</h1>
                   </div>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("proficiency")}
+                  />
                 </div>
               </div>
             </div>
@@ -345,7 +384,11 @@ function Homepage() {
                 work <span>together.</span>
               </h1>
 
-              <img src={btnImg} alt="button-image" />
+              <img
+                src={btnImg}
+                alt="button-image"
+                onClick={() => navigateHandler("contact-us")}
+              />
             </div>
 
             <img src={icon2} alt="design-icon" className={styles.design_icon} />

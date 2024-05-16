@@ -4,11 +4,13 @@ import icon2 from "../../assets/icons/icon2.png";
 import signImg from "../../assets/images/sign.png";
 import btnImg from "../../assets/icons/btn-icon.svg";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./projectPage.module.css";
 import mainStyles from "../mainstyles.module.css";
 import styleOne from "../homepage/homepage.module.css";
 
 function ProjectPage() {
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(undefined);
 
   useEffect(() => {
@@ -24,12 +26,16 @@ function ProjectPage() {
     };
   }, []);
 
+  function navigateHandler(link) {
+    navigate(`/${link}`);
+  }
+
   return (
     <section className={mainStyles.section_main}>
       <div className={mainStyles.section_main_sub}>
         <div className={`${mainStyles.row} ${styles.about_top}`}>
           <div className={`${styles.about_top_right}`}>
-            <h1>Skills</h1>
+            <h1>Projects</h1>
 
             <div
               className={`${mainStyles.row} ${styles.about_top_right_bottom}`}
@@ -47,28 +53,31 @@ function ProjectPage() {
                     <ul>
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Contributed to Nadakacheri, a React.js payroll
+                          application, blending UI development with critical
+                          logic implementation and API integration for seamless
+                          worker pay calculation, allocation, and automated
+                          report generation.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Delivered crucial functionalities in Nadakacheri,
+                          streamlining pay processing by leveraging React.js to
+                          intuitively calculate worker earnings based on their
+                          working hours, facilitating efficient payroll
+                          management.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Enhanced user experience in Nadakacheri through
+                          frontend UI development, while ensuring robust backend
+                          integration for precise pay allocation and automated
+                          report delivery, optimizing workflow for company
+                          owners.
                         </span>
                       </li>
                     </ul>
@@ -89,28 +98,31 @@ function ProjectPage() {
                     <ul>
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Spearheaded frontend development for Nadakacheri, a
+                          comprehensive CRM React.js application facilitating
+                          seamless interaction between users and technicians,
+                          enabling real-time updates, order placements, expense
+                          tracking, and live technician tracking
+                          functionalities.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Leveraged expertise in web and mobile app development
+                          to ensure a fluid user experience across platforms,
+                          enhancing accessibility and usability for both
+                          technicians and users seeking repair services.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Integrated critical logical functionalities and API
+                          integrations, optimizing performance and functionality
+                          while maintaining a sleek and intuitive UI, showcasing
+                          versatility in frontend development for web and mobile
+                          environments.
                         </span>
                       </li>
                     </ul>
@@ -131,28 +143,30 @@ function ProjectPage() {
                     <ul>
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Played a key role in frontend development and integral
+                          logic implementation for 'Quordinate', a dynamic
+                          auction React.js application, enabling seamless
+                          interaction for buyers and sellers to bid, chat, and
+                          access available materials in real-time.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Utilized UI expertise to craft intuitive interfaces,
+                          facilitating smooth user experiences throughout
+                          bidding processes and API integrations, fostering
+                          efficient buyer-seller interactions within the
+                          platform.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Contributed pivotal functionalities to 'Quordinate',
+                          empowering users to engage effortlessly in auction
+                          activities, bridging gaps between buyers and sellers
+                          in a streamlined, interactive marketplace environment.
                         </span>
                       </li>
                     </ul>
@@ -173,28 +187,31 @@ function ProjectPage() {
                     <ul>
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Developed "Energeek," a dynamic React.js app
+                          facilitating personalized home setups, including
+                          living spaces, kitchen layouts, and CCTV preferences,
+                          with seamless API integrations for a streamlined user
+                          experience.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Implemented critical logical functionalities and API
+                          development using Node.js and Express.js, empowering
+                          users to effortlessly tailor their home needs, whether
+                          for apartments or villas, while ensuring comprehensive
+                          quotation generation capabilities.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Designed and implemented an intuitive admin panel
+                          enabling efficient tracking of all generated
+                          quotations, showcasing proficiency in full-stack
+                          development and meticulous attention to detail in
+                          delivering a robust, user-centric application.
                         </span>
                       </li>
                     </ul>
@@ -215,28 +232,31 @@ function ProjectPage() {
                     <ul>
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Developed 'Meinhardt' React.js app, integrating
+                          Node.js and Express for robust backend API
+                          functionalities, enabling real-time monitoring and
+                          historical data analysis of building humidity and
+                          atmospheric levels to prevent potential damage.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Implemented full-stack solutions to ensure seamless
+                          data flow from sensors to frontend, enabling
+                          comprehensive tracking of environmental metrics and
+                          timely alerts for any anomalies, enhancing building
+                          maintenance efficiency and safety measures.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Leveraged expertise in full-stack development to
+                          create an intuitive user interface for 'Mehindart,'
+                          empowering users to effortlessly access and interpret
+                          building data trends, fostering proactive maintenance
+                          strategies and mitigating potential risks effectively.
                         </span>
                       </li>
                     </ul>
@@ -257,28 +277,33 @@ function ProjectPage() {
                     <ul>
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Spearheaded the creation of 'Charteey', a dynamic
+                          trading analysis and course platform, leveraging
+                          Node.js and Express.js for robust backend
+                          functionalities, while implementing React.js for
+                          intuitive user interfaces and React Native for mobile
+                          development.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Played a pivotal role in crafting essential logical
+                          functionalities and API development, ensuring seamless
+                          data analysis and presentation for traders, alongside
+                          developing a responsive dashboard for real-time
+                          monitoring of risk and rewards.
                         </span>
                       </li>
 
                       <li>
                         <span>
-                          Sit amet luctussd fav venenatis, lectus magna
-                          fringilla inis urna, porttitor asna rhoncus dolor
-                          purus non enim aberitin praesent in elementum sahas
-                          facilisis leo, vel fringilla est etisam dignissim.
+                          Contributed expertise to the design and implementation
+                          of mobile app UI and functionalities using React
+                          Native, enhancing accessibility for traders on-the-go,
+                          while also facilitating comprehensive courses for
+                          aspiring stock analysts within the 'Charteey'
+                          ecosystem.
                         </span>
                       </li>
                     </ul>
@@ -317,7 +342,11 @@ function ProjectPage() {
                   <h1>Profiles</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
             </div>
           )}
@@ -336,7 +365,11 @@ function ProjectPage() {
                   work <span>together.</span>
                 </h1>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("contact-us")}
+                />
               </div>
 
               <img
@@ -373,7 +406,11 @@ function ProjectPage() {
                   <h1>Credentials</h1>
                 </div>
 
-                <img src={btnImg} alt="button-image" />
+                <img
+                  src={btnImg}
+                  alt="button-image"
+                  onClick={() => navigateHandler("credentials")}
+                />
               </div>
             </div>
           )}
@@ -409,7 +446,11 @@ function ProjectPage() {
                       <h1>Profiles</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("contact-us")}
+                    />
                   </div>
                 </div>
 
@@ -438,7 +479,11 @@ function ProjectPage() {
                       <h1>Credentials</h1>
                     </div>
 
-                    <img src={btnImg} alt="button-image" />
+                    <img
+                      src={btnImg}
+                      alt="button-image"
+                      onClick={() => navigateHandler("credentials")}
+                    />
                   </div>
                 </div>
               </div>
@@ -456,7 +501,11 @@ function ProjectPage() {
                     work <span>together.</span>
                   </h1>
 
-                  <img src={btnImg} alt="button-image" />
+                  <img
+                    src={btnImg}
+                    alt="button-image"
+                    onClick={() => navigateHandler("contact-us")}
+                  />
                 </div>
 
                 <img
