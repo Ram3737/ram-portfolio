@@ -70,15 +70,8 @@ function Homepage() {
           </motion.div>
 
           <div className={styles.home_section_top_right}>
-            <motion.div
+            <div
               className={`${mainStyles.cont_bdr} ${styles.top_right_sub_one}`}
-              animate={{
-                opacity: 1,
-                scale: [0, 1],
-              }}
-              transition={{
-                duration: 1,
-              }}
             >
               <div style={{ width: "95%", overflow: "hidden" }}>
                 <Marquee pauseOnHover={true} speed={40}>
@@ -92,7 +85,7 @@ function Homepage() {
                   </span>
                 </Marquee>
               </div>
-            </motion.div>
+            </div>
 
             <div className={`${mainStyles.row} ${styles.top_right_sub_two}`}>
               <motion.div
