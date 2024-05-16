@@ -183,6 +183,20 @@ function MainNavigation(props) {
 
         {windowWidth <= 875 && (
           <div className={styles.menu_btn} onClick={menuBtnHandler}>
+            <ButtonComponent
+              text={"Resume"}
+              style={styles.button}
+              handler={downloadResumeHandler}
+              children={
+                <MdOutlineFileDownload
+                  color="#fff"
+                  size={18}
+                  style={{ marginRight: "5px" }}
+                />
+              }
+              indicator={btnLoader}
+              disabled={btnLoader}
+            />
             {!isMenuBtnClicked ? (
               <RiMenu3Line size={25} color="#fff" />
             ) : (
@@ -262,8 +276,18 @@ function MainNavigation(props) {
 
                     <div className={styles.menu_option_btn_container}>
                       <ButtonComponent
-                        text={"Let's Talk"}
-                        handler={talkBtnHandler}
+                        text={"Resume"}
+                        style={styles.button}
+                        handler={downloadResumeHandler}
+                        children={
+                          <MdOutlineFileDownload
+                            color="#fff"
+                            size={18}
+                            style={{ marginRight: "5px" }}
+                          />
+                        }
+                        indicator={btnLoader}
+                        disabled={btnLoader}
                       />
                     </div>
                   </div>

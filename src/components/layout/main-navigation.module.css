@@ -80,6 +80,10 @@
 .menu_btn {
   width: auto;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 }
 
 .menu_overlay {
@@ -93,7 +97,7 @@
   height: calc(100% - 5rem);
   padding: 1rem;
   z-index: 10;
-  background-color: rgba(0, 0, 2, 0.5);
+  /* background-color: rgba(0, 0, 2, 0.5); */
 }
 
 .menu_container {
@@ -151,4 +155,11 @@
   min-height: 100vh;
   margin-top: 0;
   background-color: var(--color-main-bg);
+}
+
+@media screen and (max-width: 876px) {
+  .button {
+    padding: 7px 15px !important;
+    font-size: 14px !important;
+  }
 }
